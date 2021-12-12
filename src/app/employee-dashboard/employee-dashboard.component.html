@@ -1,0 +1,94 @@
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-light p-4">
+    <h5 class="text-Black h4">Filtrer</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Prénom commence par D
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Prénom commence/termine par D
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Prénom commence par D et contient 6 caractéres
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Rues des employés
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Ville Toulouse
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Ville Bordeaux/Paris et prénom commence par M
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Ancienneté>10
+      </label>
+    </div>
+
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex">
+      <button type="button" class="btn btn-success">Ajouter employés</button>
+      <button type="button" class="btn btn-secondary">Modifier primes</button>
+    </div>
+  </div>
+</nav>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Ancienneté</th>
+      <th scope="col">Ville</th>
+      <th scope='col'>Prime</th>
+      <th scope='col'>Téléphone</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employ">
+      <th scope="row">{{emp.id}}</th>
+      <td>{{emp.nom}}</td>
+      <td>{{emp.prenom}}</td>
+      <td>{{emp.anciennete}}</td>
+      <td>{{emp.ville}}</td>
+      <td>{{emp.prime}}</td>
+      <td>{{emp.tel}}</td>
+      <td>
+        <button class="btn btn-primary mr-2" > Update </button>
+        <button class="btn btn-danger mr-2" > Delete </button>
+        <button class="btn btn-warning" > Delete </button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
